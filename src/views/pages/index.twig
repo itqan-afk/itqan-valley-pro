@@ -17,7 +17,7 @@
                 <span><strong>{{ store.name }}</strong><small>حلول أعمال وتطوير مهني</small></span>
             </a>
             <div class="itqan-home__nav-actions">
-                <a class="itqan-home__nav-link" href="{{ products_url }}">المنتجات</a>
+                <a class="itqan-home__nav-link" data-products-link href="{{ products_url }}">المنتجات</a>
                 <a class="itqan-home__nav-link" href="#packages">الباقات</a>
                 <a class="itqan-home__nav-cta" href="#order">ابدأ طلبك <span aria-hidden="true">←</span></a>
             </div>
@@ -29,7 +29,7 @@
                 <h1>نتقن حضورك المهني<br><em>ونطوّر طريقة عملك.</em></h1>
                 <p class="itqan-home__lead">خدمات للباحثين عن الوظائف والموظفين، ومنتجات وحلول لأصحاب الأعمال والمنشآت—من السيرة الذاتية إلى أنظمة الأداء والتشغيل.</p>
                 <div class="itqan-home__actions">
-                    <a class="itqan-button itqan-button--primary" href="{{ products_url }}">تصفح المنتجات</a>
+                    <a class="itqan-button itqan-button--primary" data-products-link href="{{ products_url }}">تصفح المنتجات</a>
                     <a class="itqan-button itqan-button--outline" href="#services">خدمات الأفراد</a>
                 </div>
                 <div class="itqan-home__proof">
@@ -55,25 +55,25 @@
                 <p>اختر باقة جاهزة أو انتقل إلى خدمة مخصصة بناءً على مرحلتك والأثر الذي تريد تحقيقه.</p>
             </div>
             <div class="itqan-package-grid">
-                <a class="itqan-package itqan-package--dark" href="{{ products_url }}">
+                <a class="itqan-package itqan-package--dark" data-products-link href="{{ products_url }}">
                     <span class="itqan-package__code">KPI <small>IV-EPM-001</small></span>
                     <h3>باقة إدارة الأداء التنفيذي</h3>
                     <p>لوحة مؤشرات ومتابعة إجراءات وتقرير تنفيذي.</p>
                     <strong>249 ر.س</strong>
                 </a>
-                <a class="itqan-package" href="{{ products_url }}">
+                <a class="itqan-package" data-products-link href="{{ products_url }}">
                     <span class="itqan-package__code">CV <small>للباحث عن عمل</small></span>
                     <h3>باقة البداية المهنية</h3>
                     <p>سيرة ATS وخطاب تقديم وجولة تعديلات.</p>
                     <strong>ابتداءً من 269 ر.س</strong>
                 </a>
-                <a class="itqan-package" href="{{ products_url }}">
+                <a class="itqan-package" data-products-link href="{{ products_url }}">
                     <span class="itqan-package__code">PRO <small>الأكثر تكاملًا</small></span>
                     <h3>باقة الحضور المهني</h3>
                     <p>سيرة باللغتين وLinkedIn وخطاب مخصص.</p>
                     <strong>ابتداءً من 549 ر.س</strong>
                 </a>
-                <a class="itqan-package" href="{{ products_url }}">
+                <a class="itqan-package" data-products-link href="{{ products_url }}">
                     <span class="itqan-package__code">OPS <small>للمنشآت</small></span>
                     <h3>باقة الانطلاقة الإدارية</h3>
                     <p>مؤشرات وقرارات وقالب تقرير تنفيذي.</p>
@@ -176,5 +176,15 @@
     </div>
 {% endblock %}
 {% block scripts %}
+    <script>
+        document.querySelectorAll('[data-products-link]').forEach((link) => {
+            const previewQuery = window.location.search;
+            if (previewQuery) {
+                const productUrl = new URL(link.href, window.location.origin);
+                productUrl.search = previewQuery;
+                link.href = productUrl.toString();
+            }
+        });
+    </script>
     <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
