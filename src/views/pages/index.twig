@@ -1,0 +1,202 @@
+{#
+| Variable         | Type       | Description                                                         |
+|------------------|------------|---------------------------------------------------------------------|
+| page             | object     |                                                                     |
+| page.title       | string     | *could be html                                                      |
+| page.slug        | string     | ex: "cat.show"                                                      |
+#}
+{% extends "layouts.master" %}
+{% block content %}
+    <div class="itqan-home itqan-pro">
+        <nav class="itqan-home__nav" aria-label="التنقل الرئيسي">
+            <a class="itqan-home__brand" href="#top">
+                {% if store.logo %}
+                    <img src="{{ store.logo }}" alt="{{ store.name }}" width="44" height="44">
+                {% endif %}
+                <span><strong>{{ store.name }}</strong><small>حلول أعمال وتطوير مهني</small></span>
+            </a>
+            <div class="itqan-home__nav-actions">
+                <a class="itqan-home__nav-link" href="#packages">الباقات</a>
+                <a class="itqan-home__nav-cta" href="#order">ابدأ طلبك <span aria-hidden="true">←</span></a>
+            </div>
+        </nav>
+
+        <section class="itqan-home__hero" id="top">
+            <div class="itqan-home__hero-copy">
+                <p class="itqan-home__hero-kicker"><span aria-hidden="true"></span>إتقان فالي لخدمات الأعمال والتطوير المهني</p>
+                <h1>نتقن حضورك المهني<br><em>ونطوّر طريقة عملك.</em></h1>
+                <p class="itqan-home__lead">خدمات للباحثين عن الوظائف والموظفين، ومنتجات وحلول لأصحاب الأعمال والمنشآت—من السيرة الذاتية إلى أنظمة الأداء والتشغيل.</p>
+                <div class="itqan-home__actions">
+                    <a class="itqan-button itqan-button--primary" href="#career">خدمات الأفراد</a>
+                    <a class="itqan-button itqan-button--outline" href="#business">حلول الأعمال</a>
+                </div>
+                <div class="itqan-home__proof">
+                    <span>خدمة مخصصة</span>
+                    <span>منتجات جاهزة</span>
+                    <span>تنفيذ باحتراف</span>
+                </div>
+            </div>
+            <div class="itqan-home__hero-art" aria-hidden="true">
+                <span class="itqan-home__hero-orbit itqan-home__hero-orbit--one"></span>
+                <span class="itqan-home__hero-orbit itqan-home__hero-orbit--two"></span>
+                <span class="itqan-home__hero-mark">IV</span>
+                <span class="itqan-home__hero-line"></span>
+                <span class="itqan-home__hero-note">ITQAN<br>VALLEY</span>
+                <span class="itqan-home__hero-label">BUSINESS<br>SOLUTIONS</span>
+            </div>
+        </section>
+
+        <section class="itqan-home__packages" aria-label="باقات إتقان فالي">
+            <div class="itqan-section-heading">
+                <p class="itqan-home__eyebrow">ابدأ من احتياجك</p>
+                <h2>حلول تبدأ من احتياجك</h2>
+                <p>اختر باقة جاهزة أو انتقل إلى خدمة مخصصة بناءً على مرحلتك والأثر الذي تريد تحقيقه.</p>
+            </div>
+            <div class="itqan-package-grid">
+                <a class="itqan-package itqan-package--dark" href="#business">
+                    <span class="itqan-package__code">KPI <small>IV-EPM-001</small></span>
+                    <h3>باقة إدارة الأداء التنفيذي</h3>
+                    <p>لوحة مؤشرات ومتابعة إجراءات وتقرير تنفيذي.</p>
+                    <strong>249 ر.س</strong>
+                </a>
+                <a class="itqan-package" href="#career">
+                    <span class="itqan-package__code">CV <small>للباحث عن عمل</small></span>
+                    <h3>باقة البداية المهنية</h3>
+                    <p>سيرة ATS وخطاب تقديم وجولة تعديلات.</p>
+                    <strong>ابتداءً من 269 ر.س</strong>
+                </a>
+                <a class="itqan-package" href="#career">
+                    <span class="itqan-package__code">PRO <small>الأكثر تكاملًا</small></span>
+                    <h3>باقة الحضور المهني</h3>
+                    <p>سيرة باللغتين وLinkedIn وخطاب مخصص.</p>
+                    <strong>ابتداءً من 549 ر.س</strong>
+                </a>
+                <a class="itqan-package" href="#business">
+                    <span class="itqan-package__code">OPS <small>للمنشآت</small></span>
+                    <h3>باقة الانطلاقة الإدارية</h3>
+                    <p>مؤشرات وقرارات وقالب تقرير تنفيذي.</p>
+                    <strong>حسب النطاق</strong>
+                </a>
+            </div>
+        </section>
+
+        <section class="itqan-home__audience">
+            <span>للباحثين عن عمل</span><i>•</i><span>للموظفين والمهنيين</span><i>•</i><span>لأصحاب الأعمال</span><i>•</i><span>للمنشآت والإدارات</span>
+        </section>
+
+        <section class="itqan-home__split" id="career">
+            <div>
+                <p class="itqan-home__eyebrow">للأفراد والمهنيين</p>
+                <h2>خدمات تبني حضورك وتقوّي فرصك المهنية</h2>
+                <p>نصيغ أدواتك المهنية بما يعكس خبرتك الحقيقية ويخاطب الوظيفة أو المرحلة التي تستهدفها.</p>
+                <a class="itqan-text-link" href="#services">تعرّف على الخدمات <span>←</span></a>
+            </div>
+            <div class="itqan-home__split-number">01</div>
+        </section>
+
+        <section class="itqan-home__split itqan-home__split--reverse" id="business">
+            <div>
+                <p class="itqan-home__eyebrow">للمنشآت والإدارات</p>
+                <h2>أدوات وحلول تجعل التشغيل أكثر وضوحًا</h2>
+                <p>منتجات جاهزة وخدمات تخصيص تربط البيانات بالمسؤولية والإجراء والقرار.</p>
+                <a class="itqan-text-link" href="#business-services">استكشف حلول الأعمال <span>←</span></a>
+            </div>
+            <div class="itqan-home__split-number">02</div>
+        </section>
+
+        <section class="itqan-home__services" id="services">
+            <div class="itqan-section-heading">
+                <p class="itqan-home__eyebrow">للأفراد والمهنيين</p>
+                <h2>خدمات تبني حضورك<br>وتقوّي فرصك المهنية.</h2>
+                <p>نصيغ أدواتك المهنية بما يعكس خبرتك الحقيقية ويخاطب الوظيفة أو المرحلة التي تستهدفها.</p>
+            </div>
+            <div class="itqan-service-grid">
+                {% set personal_services = [
+                    ['CV', 'سيرة ذاتية ATS', 'صياغة احترافية متوافقة مع أنظمة الفرز، بالعربية أو الإنجليزية.', 'ابتداءً من 179 ر.س'],
+                    ['IN', 'تحسين ملف LinkedIn', 'عنوان وملخص وخبرات ومهارات تعكس قيمتك المهنية بوضوح.', 'ابتداءً من 179 ر.س'],
+                    ['CL', 'خطاب تقديم وظيفي', 'خطاب مخصص يربط خبراتك بمتطلبات الوظيفة المستهدفة.', 'ابتداءً من 119 ر.س'],
+                    ['EX', 'سيرة ذاتية تنفيذية', 'سيرة تبرز الأثر والقيادة والإنجازات وصناعة القرار.', 'ابتداءً من 349 ر.س'],
+                    ['RV', 'تقييم السيرة الحالية', 'مراجعة المحتوى والهيكل والكلمات المفتاحية مع توصيات عملية.', 'ابتداءً من 89 ر.س'],
+                    ['PK', 'التميز المهني', 'سيرة عربية وإنجليزية، LinkedIn، وخطاب تقديم ضمن باقة واحدة.', 'ابتداءً من 549 ر.س'],
+                    ['PMP', 'متتبع تحضير PMP / GRCA', 'قالب Excel لخطة الدراسة وسجل ساعات PDU، منظم حسب مجالات الاختبار.', '99 ر.س'],
+                    ['MI', 'دليل المقابلة التنفيذية', 'منهجية STAR، بنك أسئلة قيادية، وقائمة تحضير — قالب Word جاهز.', '129 ر.س']
+                ] %}
+                {% for service in personal_services %}
+                    <article class="itqan-service-card">
+                        <div class="itqan-service-card__top"><span>{{ service[0] }}</span><small>اطلب الخدمة</small></div>
+                        <h3>{{ service[1] }}</h3><p>{{ service[2] }}</p>
+                        <strong>{{ service[3] }}</strong>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="itqan-home__services itqan-home__services--business" id="business-services">
+            <div class="itqan-section-heading">
+                <p class="itqan-home__eyebrow">لأصحاب الأعمال والمنشآت</p>
+                <h2>أدوات وحلول تجعل<br>التشغيل أكثر وضوحًا.</h2>
+                <p>منتجات جاهزة وخدمات تخصيص تربط البيانات بالمسؤولية والإجراء والقرار.</p>
+            </div>
+            <div class="itqan-service-grid">
+                {% set business_services = [
+                    ['KPI', 'باقة إدارة الأداء التنفيذي', 'لوحة مؤشرات، متابعة إجراءات، وقالب تقرير تنفيذي بالعربية والإنجليزية.', '249 ر.س'],
+                    ['DB', 'لوحة مؤشرات مخصصة', 'تصميم مؤشرات ومستهدفات ولوحة متابعة تناسب إدارة أو منشأة محددة.', 'حسب النطاق'],
+                    ['EO', 'نظام الاجتماعات والقرارات', 'متابعة القرارات والملاك والمواعيد والتصعيد حتى الإغلاق.', 'حسب النطاق'],
+                    ['CT', 'متابع العقود والمشتريات', 'أداة منظمة لمتابعة المنافسات والعقود والتجديدات والموردين.', 'حسب النطاق'],
+                    ['RP', 'تصميم تقرير تنفيذي', 'تحويل البيانات والمستجدات إلى عرض قيادي مختصر وواضح للقرار.', 'حسب النطاق'],
+                    ['SOP', 'توثيق الإجراءات ومسارات العمل', 'صياغة إجراءات عملية وتحديد الأدوار ونقاط الاعتماد ومخرجات كل مرحلة.', 'حسب النطاق'],
+                    ['ACO', 'متتبع جاهزية اعتماد ACO', 'قالب Excel لقياس جاهزية نموذج الرعاية المُنسّقة عبر 15 نطاقًا رئيسيًا.', '299 ر.س'],
+                    ['PMOK', 'حزمة حوكمة مكتب المشاريع', 'ميثاق PMO، مصفوفة RACI، ولوحة متابعة محفظة المشاريع في ملف واحد.', '399 ر.س'],
+                    ['TRN', 'قائمة استعداد التحول التنظيمي', 'قالب Excel لمتابعة نقل الصلاحيات والأنظمة والعقود عبر 7 محاور تحول.', '249 ر.س'],
+                    ['HKPI', 'دليل مؤشرات القطاع الصحي', 'مكتبة مؤشرات جاهزة بطرق الحساب لـ 6 محاور: الجودة، السلامة، الكفاءة، المالية، والموارد البشرية.', '279 ر.س']
+                ] %}
+                {% for service in business_services %}
+                    <article class="itqan-service-card"><div class="itqan-service-card__top"><span>{{ service[0] }}</span><small>حل أعمال</small></div><h3>{{ service[1] }}</h3><p>{{ service[2] }}</p><strong>{{ service[3] }}</strong></article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="itqan-home__bundles" id="packages">
+            <div class="itqan-section-heading"><p class="itqan-home__eyebrow">قيمة أكبر في طلب واحد</p><h2>باقات تناسب مرحلتك</h2><p>ابدأ بالخدمة التي تحتاجها الآن، أو اختر باقة تجمع المخرجات الأساسية بسعر أوضح.</p></div>
+            <div class="itqan-bundle-grid">
+                <article class="itqan-bundle"><small>للباحث عن عمل</small><h3>باقة البداية المهنية</h3><ul><li>سيرة ATS بلغة واحدة</li><li>خطاب تقديم وظيفي</li><li>جولة تعديلات واحدة</li></ul><strong>ابتداءً من 269 ر.س</strong></article>
+                <article class="itqan-bundle itqan-bundle--featured"><small>الأكثر تكاملًا</small><h3>باقة الحضور المهني</h3><ul><li>سيرة عربية وإنجليزية</li><li>تحسين LinkedIn</li><li>خطاب تقديم مخصص</li></ul><strong>ابتداءً من 549 ر.س</strong></article>
+                <article class="itqan-bundle"><small>للمنشأة والإدارة</small><h3>باقة الانطلاقة الإدارية</h3><ul><li>لوحة مؤشرات أساسية</li><li>متابع اجتماعات وقرارات</li><li>قالب تقرير تنفيذي</li></ul><strong>يحدد حسب النطاق</strong></article>
+            </div>
+        </section>
+
+        <section class="itqan-home__workflow">
+            <div class="itqan-section-heading"><p class="itqan-home__eyebrow">دورة عمل شهرية</p><h2>خمس خطوات من البيانات إلى القرار.</h2><p>مسار بسيط يساعد الفريق على الحفاظ على الانضباط والوضوح من دون تعقيد تقني.</p></div>
+            <div class="itqan-workflow-grid">
+                {% set workflow = [['01', 'عرّف المؤشرات', 'حدد التعريف والوحدة والمالك والمستهدف وحدود التنبيه.'], ['02', 'أدخل النتائج', 'حدّث النتائج الفعلية الشهرية في الخلايا المخصصة للإدخال.'], ['03', 'اقرأ الحالة', 'راجع الحالة المحسوبة تلقائيًا والانحراف واتجاه الأداء.'], ['04', 'عيّن الإجراء', 'اربط كل استثناء بمالك وموعد ودليل إغلاق واضح.'], ['05', 'ارفع القرار', 'حوّل النتائج إلى تقرير مختصر وقرارات قابلة للاعتماد.']] %}
+                {% for step in workflow %}<article><span>{{ step[0] }}</span><h3>{{ step[1] }}</h3><p>{{ step[2] }}</p></article>{% endfor %}
+            </div>
+        </section>
+
+        <section class="itqan-home__featured-product">
+            <div class="itqan-section-heading"><p class="itqan-home__eyebrow">منتج مميز للأعمال</p><h2>باقة إدارة الأداء التنفيذي</h2><p>نقطة بداية منظمة تجمع المؤشرات والنتائج والإجراءات والتقرير التنفيذي في دورة عمل واحدة.</p></div>
+            <div class="itqan-featured-product__body"><div class="itqan-dashboard-placeholder">لوحة الأداء التنفيذية | إتقان فالي</div><div><p>IV-EPM-001</p><h3>متابعة واضحة بدل الملفات المتفرقة</h3><p>عرّف مؤشراتك، أدخل النتائج، اكتشف الاستثناءات، تابع الإجراء، وارفع القرار باستخدام ملفات مهنية جاهزة للتخصيص.</p><ul><li>لوحة أداء تنفيذية عربية وإنجليزية</li><li>سجل مؤشرات ومستهدفات وحدود وأوزان</li><li>حساب تلقائي للحالة والإنجاز والانحراف</li><li>متابعة الإجراءات والملاك والمواعيد والأدلة</li><li>قالب تقرير تنفيذي من 6 شرائح باللغتين</li><li>دليل تشغيل وترخيص ثنائي اللغة</li></ul><strong>سعر الإطلاق المقترح 249 ر.س</strong> <del>299 ر.س</del><br><a class="itqan-text-link" href="#order">اطلبها عبر المتجر <span>←</span></a><small>ترخيص استخدام داخلي لمنشأة واحدة • بدون ماكرو • بيانات تجريبية قابلة للاستبدال</small></div></div>
+        </section>
+
+        <section class="itqan-home__method"><div class="itqan-section-heading"><p class="itqan-home__eyebrow">طريقة خدمتنا</p><h2>من خدمة فردية إلى حل متكامل</h2><p>نقدم مخرجات مخصصة للأفراد، ومنتجات جاهزة للأعمال، وخدمات تطوير تتوسع مع الاحتياج.</p></div><div class="itqan-method-grid"><article><span>01</span><h3>الخدمات المهنية</h3><p>سير ذاتية وملفات LinkedIn وخطابات تُصاغ وفق خبرتك والفرصة المستهدفة.</p></article><article><span>02</span><h3>المنتجات الرقمية</h3><p>قوالب وباقات جاهزة تساعد المهنيين والمنشآت على التنظيم والقياس والمتابعة.</p></article><article><span>03</span><h3>حلول الأعمال المخصصة</h3><p>لوحات وتقارير وإجراءات ومسارات عمل تُبنى وفق واقع الإدارة أو المنشأة.</p></article></div></section>
+
+        <section class="itqan-home__comparison"><div><p class="itqan-home__eyebrow">القيمة العملية</p><h2>ليست لوحة أرقام فقط</h2><p>الباقة تربط القياس بالمسؤولية، وتمنح الإدارة صورة مختصرة يمكن أن تتحول مباشرة إلى إجراء وقرار.</p><strong>4</strong><span>طبقات مترابطة<br>مؤشر • نتيجة • إجراء • قرار</span></div><div class="itqan-comparison-grid"><article><small>قبل</small><h3>ملفات متفرقة</h3><p>تعريفات مختلفة، متابعة يدوية، ومسؤوليات غير واضحة.</p></article><article><small>بعد</small><h3>دورة إدارية واحدة</h3><p>بيانات موحدة، حالة واضحة، وإجراء يمكن متابعته حتى الإغلاق.</p></article></div></section>
+
+        <section class="itqan-home__faq" id="faq"><div class="itqan-section-heading"><p class="itqan-home__eyebrow">قبل الشراء</p><h2>أسئلة شائعة</h2></div><div class="itqan-faq-list"><details><summary>من تخدم إتقان فالي؟</summary></details><details><summary>هل الخدمات المهنية مخصصة لكل عميل؟</summary></details><details><summary>هل الملفات قابلة للتعديل؟</summary></details><details><summary>هل تحتاج الباقة إلى برامج خاصة؟</summary></details><details><summary>هل البيانات الموجودة حقيقية؟</summary></details><details><summary>هل يشمل السعر خدمة التخصيص؟</summary></details><details><summary>هل يمكن إعادة بيع الملفات؟</summary></details></div></section>
+
+        <section class="itqan-home__cta" id="order">
+            <p class="itqan-home__eyebrow">اختر المسار المناسب</p>
+            <h2>فرص مهنية أقوى<br><em>وأعمال أكثر إتقانًا.</em></h2>
+            <p>حدد الخدمة أو الباقة المناسبة، وتواصل معنا لتأكيد نطاق العمل والمتطلبات ومدة التسليم قبل البدء.</p>
+            <a class="itqan-button itqan-button--primary" href="https://wa.me/966555365305?text=مرحبًا%20إتقان%20فالي،%20أرغب%20في%20الاستفسار%20عن%20خدماتكم.">تواصل عبر واتساب</a>
+            <a class="itqan-button itqan-button--whatsapp" href="mailto:itqan@itqanvalley.com?subject=استفسار%20عن%20خدمات%20إتقان%20فالي">راسلنا بالبريد</a>
+            <small>نرد على استفسارات الأفراد وأصحاب الأعمال ونساعدك في اختيار الخدمة المناسبة.</small>
+        </section>
+
+        <footer class="itqan-home__footer"><div><strong>إتقان فالي</strong><span>Business Solutions &amp; Development</span><p>خدمات تطوير مهني للأفراد، ومنتجات وحلول تنظيم وتشغيل لأصحاب الأعمال والمنشآت.</p></div><nav aria-label="روابط مهمة"><a href="#career">للأفراد</a><a href="#business">للأعمال</a><a href="#packages">الباقات</a><a href="#faq">الأسئلة الشائعة</a></nav><div><strong>تواصل معنا</strong><a href="https://wa.me/966555365305">+966 55 536 5305</a><a href="mailto:itqan@itqanvalley.com">itqan@itqanvalley.com</a></div></footer>
+
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'home.js' | asset }}"></script>
+{% endblock %}
