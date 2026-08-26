@@ -189,8 +189,32 @@
   .main-content { padding: 1.75rem; border: 1px solid var(--pro-line); background: rgba(13, 35, 53, .72); }
   [data-testid="store-product-title"] { color: #fff !important; font-family: "Thmanyah Display", var(--font-main), sans-serif; }
   .product-entry__sub-title, .product__description, .article--main { color: rgba(233, 247, 251, .72) !important; }
+  .product-entry__sub-title { overflow-wrap: anywhere; white-space: normal; }
   [data-testid="store-product-price"] p, .total-price { color: var(--pro-accent) !important; }
+  .product-sku, .product-barcode { color: #1f2937 !important; }
   .sticky-product-bar, .product-form > section { background: rgba(6, 17, 30, .92) !important; border: 1px solid var(--pro-line); }
+  salla-product-options {
+    display: block;
+    color: #f8fbff;
+
+    .s-product-options-option-label,
+    .s-product-options-option label,
+    .s-product-options-option b,
+    .s-product-options-option span { color: #f8fbff !important; }
+
+    .s-form-control,
+    select,
+    input,
+    textarea {
+      color: #1f2937 !important;
+      background-color: #fff !important;
+      border-color: #d1d5db !important;
+    }
+
+    .s-form-control::placeholder,
+    input::placeholder,
+    textarea::placeholder { color: #6b7280 !important; }
+  }
   salla-add-product-button::part(button), .s-button-btn { border-radius: 6px; }
   .product__description a { color: var(--pro-accent); }
   .cart-item, .shadow-default, salla-cart-summary-card { box-shadow: none !important; border: 1px solid var(--pro-line); }
@@ -198,6 +222,65 @@
   .cart-item h1, .cart-item h1 a, .cart-item .item-total { color: #fff !important; }
   .cart-item .text-gray-500, .cart-item .item-price { color: rgba(233, 247, 251, .62) !important; }
   .no-content-placeholder { background: rgba(13, 35, 53, .72); color: #fff; border: 1px solid var(--pro-line); }
+}
+
+.itqan-pro-products {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(100, 213, 242, .12), transparent 25rem),
+    var(--pro-ink);
+
+  .container--breadcrumbs { color: rgba(233, 247, 251, .6); }
+  .container--products-list { max-width: 76rem; }
+  #page-main-title { color: #fff; }
+  .main-content { min-width: 0; }
+  salla-products-list { display: block; }
+  salla-filters { color: #f8fbff; }
+}
+
+.itqan-products-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--pro-line);
+  border-radius: 10px;
+  background: linear-gradient(110deg, rgba(13, 35, 53, .96), rgba(13, 35, 53, .58));
+
+  &__copy { max-width: 42rem; }
+  &__eyebrow {
+    display: block;
+    margin-bottom: .65rem;
+    color: var(--pro-accent);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+  h1 {
+    margin: 0 0 .65rem;
+    color: #fff;
+    font: 700 clamp(2rem, 4vw, 3.25rem)/1.1 "Thmanyah Display", var(--font-main), sans-serif;
+  }
+  p { margin: 0; color: rgba(233, 247, 251, .68); line-height: 1.9; }
+  &__image {
+    width: 8rem;
+    height: 8rem;
+    flex: 0 0 8rem;
+    overflow: hidden;
+    border: 1px solid rgba(100, 213, 242, .35);
+    border-radius: 8px;
+    background: var(--pro-surface);
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+}
+
+@media (max-width: 640px) {
+  .itqan-products-hero {
+    align-items: flex-start;
+    padding: 1.5rem 1.25rem;
+    &__image { width: 5rem; height: 5rem; flex-basis: 5rem; }
+  }
 }
 
 .itqan-pro-cart__intro {

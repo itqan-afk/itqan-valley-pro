@@ -16,12 +16,9 @@ class Product extends BasePage {
 
         this.initProductOptionValidations();
 
-        if(imageZoom){
-            // call the function when the page is ready
-            this.initImagesZooming();
-            // listen to screen resizing
-            window.addEventListener('resize', () => this.initImagesZooming());
-        }
+        // Initialize desktop image zoom without blocking the rest of the product page.
+        this.initImagesZooming();
+        window.addEventListener('resize', () => this.initImagesZooming());
     }
 
     initProductOptionValidations() {

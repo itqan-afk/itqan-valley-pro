@@ -12,7 +12,8 @@
       "cart_options": "Cart Options"
     },
     "products": {
-      "barcode": "الباركود"
+      "barcode": "الباركود",
+      "browse_catalog": "Choose the right product and order it directly from the store"
     },
     "order": {
       "can_edit_or_delete_your_review_within": "You can edit or delete your review within",
