@@ -8,7 +8,7 @@
 {% extends "layouts.master" %}
 {% block content %}
     <div class="itqan-home itqan-pro">
-        {% set products_url = store.url ~ '/products' %}
+        {% set products_url = link('products') %}
         <nav class="itqan-home__nav" aria-label="التنقل الرئيسي">
             <a class="itqan-home__brand" href="#top">
                 {% if store.logo %}
@@ -176,15 +176,5 @@
     </div>
 {% endblock %}
 {% block scripts %}
-    <script>
-        document.querySelectorAll('[data-products-link]').forEach((link) => {
-            const previewQuery = window.location.search;
-            if (previewQuery) {
-                const productUrl = new URL(link.href, window.location.origin);
-                productUrl.search = previewQuery;
-                link.href = productUrl.toString();
-            }
-        });
-    </script>
     <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
