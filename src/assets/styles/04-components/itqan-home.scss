@@ -236,6 +236,13 @@ body:has(.itqan-home) #main-content { margin: 0; padding: 0; max-width: none; }
   .itqan-home__featured-product { border-top-color: rgba(185, 208, 226, .18); }
   .itqan-home__featured-product .itqan-section-heading > p:last-child, .itqan-home__featured-product__body > div:last-child > p, .itqan-home__comparison > div:first-child > p:not(.itqan-home__eyebrow), .itqan-home__method .itqan-section-heading > p:last-child { color: rgba(233, 247, 251, .64); }
   .itqan-home__dashboard-placeholder { border: 1px solid rgba(100, 213, 242, .22); border-radius: 10px; background: linear-gradient(145deg, #173e5b, #091827); min-height: 280px; }
+  .itqan-home__featured-product__body { display: block; max-width: 52rem; margin: 0 auto; }
+  .itqan-home__featured-product__body > :first-child { display: none; }
+  .itqan-home__featured-product__body > :last-child { padding: 2rem; border: 1px solid rgba(100, 213, 242, .25); border-radius: 10px; background: linear-gradient(145deg, rgba(22, 61, 88, .88), rgba(9, 24, 39, .94)); }
+  .itqan-home__featured-product__body > :last-child > p:first-child { color: var(--itqan-teal); font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+  .itqan-home__featured-product__body > :last-child h3 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+  .itqan-home__featured-product__body > :last-child ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem 1.25rem; }
+  .itqan-home__featured-product__body > :last-child ul li { font-size: .85rem; }
   .itqan-home__comparison { align-items: center; }
   .itqan-home__cta { padding-top: 5rem; padding-bottom: 5rem; }
   .itqan-home__footer { position: relative; max-width: 76rem; padding-top: 3rem; padding-bottom: 3rem; background: transparent; border-top: 1px solid rgba(185, 208, 226, .18); }
