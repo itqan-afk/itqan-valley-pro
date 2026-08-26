@@ -206,6 +206,40 @@ body:has(.itqan-home) #main-content { margin: 0; padding: 0; max-width: none; }
   &__footer { position: relative; max-width: 76rem; background: transparent; border-top: 1px solid rgba(185, 208, 226, .18); }
 }
 
+/* The page retains itqan-home BEM elements, so the Pro scope targets them explicitly. */
+.itqan-pro {
+  .itqan-home__nav { position: relative; z-index: 1; max-width: 76rem; background: rgba(9, 24, 39, .88); border-color: rgba(100, 213, 242, .2); box-shadow: 0 20px 60px rgba(0, 0, 0, .22); backdrop-filter: blur(16px); }
+  .itqan-home__brand, .itqan-home__nav-link { color: #fff; }
+  .itqan-home__brand small { color: rgba(233, 247, 251, .6); }
+  .itqan-home__nav-cta { background: var(--itqan-teal); color: var(--itqan-ink); }
+  .itqan-home__hero { position: relative; max-width: 76rem; min-height: 690px; }
+  .itqan-home__hero-copy { position: relative; z-index: 1; }
+  .itqan-home__hero-kicker { color: var(--itqan-teal); border-color: rgba(100, 213, 242, .28); background: rgba(100, 213, 242, .07); box-shadow: none; }
+  .itqan-home__hero-kicker span { background: var(--itqan-teal); }
+  .itqan-home__lead { color: rgba(233, 247, 251, .78); max-width: 38rem; }
+  .itqan-home__proof { color: rgba(233, 247, 251, .78); }
+  .itqan-home__proof span::before { color: var(--itqan-teal); }
+  .itqan-home__hero-art { border: 1px solid rgba(100, 213, 242, .25); border-radius: 14px; background: linear-gradient(145deg, #102d44, #071421 70%); }
+  .itqan-home__hero-art::before { background: radial-gradient(circle at 25% 15%, rgba(36, 119, 239, .28), transparent 36%), radial-gradient(circle at 80% 85%, rgba(100, 213, 242, .14), transparent 32%); }
+  .itqan-home__hero-orbit--one { border-color: rgba(100, 213, 242, .7); }
+  .itqan-home__packages, .itqan-home__services, .itqan-home__bundles, .itqan-home__faq, .itqan-home__featured-product, .itqan-home__comparison { position: relative; max-width: 76rem; }
+  .itqan-home__packages { padding-top: 6rem; }
+  .itqan-home__packages .itqan-section-heading > p:last-child { max-width: 39rem; margin-top: 1rem; color: rgba(233, 247, 251, .65); line-height: 1.8; }
+  .itqan-home__packages h2, .itqan-home__split h2, .itqan-home__cta h2 { color: #fff; }
+  .itqan-home__audience { position: relative; border: 0; background: var(--itqan-teal); color: #082138; }
+  .itqan-home__split { position: relative; max-width: 76rem; border-bottom-color: rgba(185, 208, 226, .18); }
+  .itqan-home__split p:not(.itqan-home__eyebrow) { color: rgba(233, 247, 251, .68); }
+  .itqan-home__split-number { color: rgba(100, 213, 242, .13); }
+  .itqan-home__services { border-top-color: rgba(185, 208, 226, .18); }
+  .itqan-home__services .itqan-section-heading > p:last-child, .itqan-home__bundles .itqan-section-heading > p:last-child { color: rgba(233, 247, 251, .64); }
+  .itqan-home__services--business, .itqan-home__method { background: #0b1d2d; }
+  .itqan-home__featured-product { border-top-color: rgba(185, 208, 226, .18); }
+  .itqan-home__featured-product .itqan-section-heading > p:last-child, .itqan-home__featured-product__body > div:last-child > p, .itqan-home__comparison > div:first-child > p:not(.itqan-home__eyebrow), .itqan-home__method .itqan-section-heading > p:last-child { color: rgba(233, 247, 251, .64); }
+  .itqan-home__dashboard-placeholder { border: 1px solid rgba(100, 213, 242, .22); border-radius: 10px; background: linear-gradient(145deg, #173e5b, #091827); min-height: 360px; }
+  .itqan-home__comparison { align-items: center; }
+  .itqan-home__footer { position: relative; max-width: 76rem; background: transparent; border-top: 1px solid rgba(185, 208, 226, .18); }
+}
+
 .itqan-pro .itqan-package,
 .itqan-pro .itqan-service-card,
 .itqan-pro .itqan-bundle,
@@ -241,7 +275,7 @@ body:has(.itqan-home) #main-content { margin: 0; padding: 0; max-width: none; }
 .itqan-pro .itqan-faq-list p { color: rgba(233, 247, 251, .68); }
 
 @media (max-width: 767px) {
-  .itqan-pro__hero { min-height: auto; padding-bottom: 4rem; }
-  .itqan-pro__hero-art { min-height: 280px; }
+  .itqan-pro .itqan-home__hero { min-height: auto; padding-bottom: 4rem; }
+  .itqan-pro .itqan-home__hero-art { min-height: 280px; }
   .itqan-pro h1 { font-size: 2.7rem; }
 }
