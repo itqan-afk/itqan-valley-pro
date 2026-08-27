@@ -224,6 +224,35 @@
   .no-content-placeholder { background: rgba(13, 35, 53, .72); color: #fff; border: 1px solid var(--pro-line); }
 }
 
+body:has(.itqan-pro-product) {
+  .store-header {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(100, 213, 242, .2);
+    background: #06111e;
+  }
+
+  .store-header .top-navbar,
+  .store-header .main-nav-container,
+  .store-header .inner {
+    background: #06111e !important;
+    color: #f8fbff;
+  }
+
+  .store-header .main-nav-container { box-shadow: 0 8px 24px rgba(0, 0, 0, .16); }
+  .store-header .navbar-brand img { max-height: 3.25rem; }
+  .store-header .navbar-brand,
+  .store-header .header-buttons,
+  .store-header .btn--rounded-gray { color: #f8fbff; }
+  .store-header .custom-main-menu a,
+  .store-header .custom-main-menu button { color: rgba(233, 247, 251, .78); }
+  .store-header .custom-main-menu a:hover,
+  .store-header .custom-main-menu button:hover { color: var(--pro-accent); }
+  .store-header .header-btn__icon,
+  .store-header .mburger i { color: var(--pro-accent); }
+  .store-header salla-search::part(input) { color: #f8fbff; }
+}
+
 .itqan-pro-products {
   background:
     radial-gradient(circle at 8% 0%, rgba(100, 213, 242, .12), transparent 25rem),
